@@ -1,7 +1,8 @@
 import time
 from os import system, name
 
-pattern = "*****"
+patternLen = int(input("Enter length of the pattern: "))
+pattern = "*" * patternLen
 
 def clear():
 
@@ -18,10 +19,10 @@ def halfPattern(indentInc=True):
 		indent = 0
 		indentIncrement = 1
 	else:
-		indent = 3
+		indent = (patternLen - 2)
 		indentIncrement = -1
 
-	for i in range(4):
+	for i in range(patternLen-1):
 		print(" " * indent, pattern, sep="")
 		indent += indentIncrement
 
